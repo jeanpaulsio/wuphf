@@ -39,3 +39,14 @@ end
 def resource_tests(resource)
   integration_tests(resource) << controller_test(resource)
 end
+
+
+guard 'livereload', grace_period: 0, apply_css_live: true do
+  watch(%r{app/views/.+\.(html.erb)$})
+  watch(%r{app/helpers/.+\.rb})
+  watch(%r{public/.+\.(css|js|html)})
+  watch(%r{config/locales/.+\.yml})
+  # Rails Assets Pipeline
+  watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
+  watch(%r{(app|vendor)(/assets/\w+/(.+)\.(scss))}) { |m| "/assets/#{m[3]}.css" }
+end
