@@ -59,6 +59,8 @@ GEM
     eventmachine (1.2.3)
     execjs (2.7.0)
     ffi (1.9.18)
+    figaro (1.1.1)
+      thor (~> 0.14)
     formatador (0.2.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -203,6 +205,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  figaro (~> 1.1, >= 1.1.1)
   guard (~> 2.14, >= 2.14.1)
   guard-livereload (~> 2.5, >= 2.5.2)
   guard-minitest (~> 2.4, >= 2.4.6)
