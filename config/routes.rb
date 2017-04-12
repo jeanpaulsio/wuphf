@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  root 'demo_wuphfs#new'
+
+  resources :demo_wuphfs
 end

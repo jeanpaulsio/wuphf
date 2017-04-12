@@ -1,0 +1,2 @@
+class DemoWuphf < ApplicationRecord
+end
