@@ -1,11 +1,15 @@
 <%= form_for @demo_wuphf do |f| %>
-  <%= f.label :message %>
-  <%= f.text_area :message %>
+  <div class="form-group">
+    <%= f.label :message %>
+    <%= f.text_area :message, class: "form-control" %>
+  </div>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control" %>
+  </div>
 
-  <%= f.submit "Wuphf!" %>
+  <div class="form-group">
+    <%= f.submit "Wuphf!", class: "btn btn-primary" %>
+  </div>
 <% end %>
-
-<% console %>
