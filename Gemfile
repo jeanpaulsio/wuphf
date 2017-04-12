@@ -19,6 +19,9 @@ gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 gem 'figaro',           '~> 1.1', '>= 1.1.1'
 gem 'bootstrap',        '~> 4.0.0.alpha6'
 
+gem 'twilio-ruby',      '~> 4.13'
+gem 'twitter',          '~> 6.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
