@@ -7,7 +7,7 @@ class DemoWuphfsController < ApplicationController
     @demo_wuphf = DemoWuphf.new(demo_wuphf_params)
 
     if @demo_wuphf.save
-      flash[:success] = "WUPHF WUPHF!"
+      flash[:success] = "WUPHF WUPHF! YOU HAVE SENT A WUPHF!"
       redirect_to new_demo_wuphf_path
     else
       render 'new'
@@ -16,6 +16,6 @@ class DemoWuphfsController < ApplicationController
 
   private
     def demo_wuphf_params
-      params.require(:demo_wuphf).permit(:message, :email, :phone, :twitter_handle)
+      params.require(:demo_wuphf).permit(:from, :to, :message, :email, :phone, :twitter_handle)
     end
 end

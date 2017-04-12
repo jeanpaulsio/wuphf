@@ -1,22 +1,35 @@
 <%= form_for @demo_wuphf do |f| %>
   <div class="form-group">
+    <%= f.label :from %>
+    <%= f.email_field :from, class: "form-control", placeholder: "Your Name", required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :to %>
+    <%= f.email_field :to, class: "form-control", placeholder: "Recipient's Name", required: true %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :email %>
-    <%= f.email_field :email, class: "form-control", required: true %>
+    <%= f.email_field :email, class: "form-control", placeholder: "bark@example.com", required: true %>
   </div>
 
   <div class="form-group">
     <%= f.label :phone %>
-    <%= f.text_field :phone, class: "form-control", required: true %>
+    <%= f.text_field :phone, class: "form-control", placeholder: "313-867-5309", maxlength: 12, required: true %>
   </div>
 
   <div class="form-group">
     <%= f.label :twitter_handle %>
-    <%= f.text_field :twitter_handle, class: "form-control", required: true %>
+    <div class="input-group">
+      <div class="input-group-addon">@</div>
+      <%= f.text_field :twitter_handle, class: "form-control", placeholder: "username", required: true %>
+    </div>
   </div>
 
   <div class="form-group">
     <%= f.label :message %>
-    <%= f.text_area :message, class: "form-control", required: true %>
+    <%= f.text_area :message, class: "form-control", maxlength: 140, required: true %>
   </div>
 
   <div class="form-group">
