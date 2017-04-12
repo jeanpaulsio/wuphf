@@ -16,6 +16,6 @@ class DemoWuphfsController < ApplicationController
 
   private
     def demo_wuphf_params
-      params.require(:demo_wuphf).permit(:message)
+      params.require(:demo_wuphf).permit(:message, :email)
     end
 end

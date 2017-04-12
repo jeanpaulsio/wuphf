@@ -4,6 +4,6 @@ class WuphfMailer < ApplicationMailer
   def wuphf_mail(demo_wuphf)
     @demo_wuphf = demo_wuphf
 
-    mail(to: "sio.jeanpaul@gmail.com", subject: "wuphf wuphf!")
+    mail(to: @demo_wuphf.email, subject: "Wuphf Wuphf! You have a WUPHF!")
   end
 end
