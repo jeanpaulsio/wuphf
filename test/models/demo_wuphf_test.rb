@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DemoWuphfTest < ActiveSupport::TestCase
   def setup
-    @demo_wuphf = DemoWuphf.new(from: "Ryan", to: "Michael", message: "WUPHF!",
+    @demo_wuphf = DemoWuphf.new(from: "Ryan", to: "Michael", message: "Test Wuphf!",
                                 email: "michaelscott@test.com", phone: "9097533874",
                                 twitter_handle: "jeanpaulsio")
   end
