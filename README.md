@@ -7,16 +7,20 @@ This is an open-source toy app to annoy your friends. The live demo can be viewe
 ## How It Works (With Images)
 
 __Fill out the form__
+
 <img src="https://cloud.githubusercontent.com/assets/8096483/24992866/72c70b66-1fd8-11e7-82df-8848606133e5.png" width="500px">
 
-Wuphfee receives an email
-![Alt text](https://cloud.githubusercontent.com/assets/8096483/24992865/72c589c6-1fd8-11e7-8388-1a8fc452f781.png "Wuphfee reeives an email")
+__Wuphfee receives an email__
 
-Wuphfee receives a text
-![Alt text](https://cloud.githubusercontent.com/assets/8096483/24992895/97c09248-1fd8-11e7-8528-8186805a1f65.png "Wuphfee receives a text")
+<img src="https://cloud.githubusercontent.com/assets/8096483/24992865/72c589c6-1fd8-11e7-8388-1a8fc452f781.png" width="500px">
 
-Wuphfee is tweeted at
-![Alt text](https://cloud.githubusercontent.com/assets/8096483/24992864/72b7d1c8-1fd8-11e7-8f52-2404073fbf7e.png "Wuphfee is tweeted at")
+__Wuphfee receives a text__
+
+<img src="https://cloud.githubusercontent.com/assets/8096483/24992895/97c09248-1fd8-11e7-8528-8186805a1f65.png" width="500px">
+
+__Wuphfee is tweeted at__
+
+<img src="https://cloud.githubusercontent.com/assets/8096483/24992864/72b7d1c8-1fd8-11e7-8f52-2404073fbf7e.png" width="500px">
 
 ## Sending a Wuphf from the landing page
 
