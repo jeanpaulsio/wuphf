@@ -1,6 +1,8 @@
 <%= form_for @demo_wuphf do |f| %>
   <div class="form-group">
-    <label for="demo_wuphf_from">Your Name</label>
+    <label for="demo_wuphf_from">
+      <span class="text-orange text-bold">*</span> Your Name
+    </label>
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-id-card-o fa-fw"></i></div>
       <%= f.text_field :from, class: "form-control", placeholder: "Your Name", required: true %>
@@ -8,7 +10,9 @@
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_to">Recipient Name</label>
+    <label for="demo_wuphf_to">
+      <span class="text-orange text-bold">*</span> Recipient Name
+    </label>
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></div>
       <%= f.text_field :to, class: "form-control", placeholder: "Recipient Name", required: true %>
@@ -16,7 +20,9 @@
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_email">Recipient Email</label>
+    <label for="demo_wuphf_email">
+      <span class="text-orange text-bold">*</span> Recipient Email
+    </label>
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></div>
       <%= f.email_field :email, class: "form-control", placeholder: "bark@example.com", required: true %>
@@ -24,7 +30,9 @@
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_phone">Recipient Phone</label>
+    <label for="demo_wuphf_phone">
+      <span class="text-orange text-bold">*</span> Recipient Phone
+    </label>
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-phone fa-fw"></i></div>
       <%= f.text_field :phone, class: "form-control", placeholder: "xxx-xxx-xxxx", maxlength: 12, required: true, pattern: '^\d{3}-\d{3}-\d{4}$' %>
@@ -32,7 +40,9 @@
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_twitter_handle">Recipient Twitter</label>
+    <label for="demo_wuphf_twitter_handle">
+      <span class="text-orange text-bold">*</span> Recipient Twitter
+    </label>
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-at fa-fw"></i></div>
       <%= f.text_field :twitter_handle, class: "form-control", placeholder: "username", required: true %>
@@ -40,7 +50,9 @@
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_message">Message</label>
+    <label for="demo_wuphf_message">
+      <span class="text-orange text-bold">*</span> Message
+    </label>
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-comments-o fa-fw"></i></div>
       <%= f.text_area :message, class: "form-control", placeholder: "Bears. Beats. Battlestar Galatica.", maxlength: 123, required: true %>
@@ -48,7 +60,11 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit "Wuphf!", class: "btn btn-outline-primary btn-lg" %>
+    <span class="text-orange">* denotes a required field</span>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Wuphf!", class: "btn btn-outline-primary" %>
   </div>
 <% end %>
 
