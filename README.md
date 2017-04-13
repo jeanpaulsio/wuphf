@@ -6,12 +6,10 @@ This is an open-source toy app to annoy your friends. The live demo can be viewe
 
 ## How It Works (With Images)
 
-Fill out the form
-
-![Alt text](https://cloud.githubusercontent.com/assets/8096483/24992866/72c70b66-1fd8-11e7-82df-8848606133e5.png "Fill out the form")
+__Fill out the form__
+<img src="https://cloud.githubusercontent.com/assets/8096483/24992866/72c70b66-1fd8-11e7-82df-8848606133e5.png" width="500px">
 
 Wuphfee receives an email
-
 ![Alt text](https://cloud.githubusercontent.com/assets/8096483/24992865/72c589c6-1fd8-11e7-8388-1a8fc452f781.png "Wuphfee reeives an email")
 
 Wuphfee receives a text
