@@ -17,6 +17,9 @@ gem 'jbuilder',         '~> 2.5'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 gem 'figaro',           '~> 1.1', '>= 1.1.1'
 
+group :development do
+  gem 'rails_real_favicon'
+end
 
 # Styling
 gem 'animate-rails',      '~> 1.0', '>= 1.0.10'

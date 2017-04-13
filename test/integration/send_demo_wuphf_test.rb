@@ -15,7 +15,7 @@ class SendDemoWuphfTest < ActionDispatch::IntegrationTest
     get root_url
 
     assert_difference 'DemoWuphf.count', 1 do
-      post demo_wuphfs_path, params: { demo_wuphf: { from: "Ryan", to: "Michael", message: "Test Wuphf",
+      post demo_wuphfs_path, params: { demo_wuphf: { from: "Ryan", to: "Michael", message: "Wuphf from integration/send_demo_wuphf",
                                                      email: "ryan@test.com", phone: "9097533874", twitter_handle: "wuphfwuphf" } }
     end
 

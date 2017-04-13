@@ -3,15 +3,7 @@
 bark:
   from: Michael
   to: Ryan
-  message: bark bark
+  message: wuphf from demo wuphfs fixture
   email: ryan@test.com
-  phone: "9097533874"
-  twitter_handle: wuphfwuphf
-
-ruff:
-  from: Jim
-  to: Pam
-  message: ruff ruff
-  email: pam@test.com
   phone: "9097533874"
   twitter_handle: wuphfwuphf
