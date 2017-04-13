@@ -1,49 +1,49 @@
 <%= form_for @demo_wuphf do |f| %>
   <div class="form-group">
     <label for="demo_wuphf_from">Your Name</label>
-    <div class="input-group input-group-lg">
+    <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-id-card-o fa-fw"></i></div>
-      <%= f.text_field :from, class: "form-control form-control-lg", placeholder: "Your Name", required: true %>
+      <%= f.text_field :from, class: "form-control", placeholder: "Your Name", required: true %>
     </div>
   </div>
 
   <div class="form-group">
     <label for="demo_wuphf_to">Recipient Name</label>
-    <div class="input-group input-group-lg">
+    <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></div>
-      <%= f.text_field :to, class: "form-control form-control-lg", placeholder: "Recipient Name", required: true %>
+      <%= f.text_field :to, class: "form-control", placeholder: "Recipient Name", required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_email">Email</label>
-    <div class="input-group input-group-lg">
+    <label for="demo_wuphf_email">Recipient Email</label>
+    <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></div>
-      <%= f.email_field :email, class: "form-control form-control-lg", placeholder: "bark@example.com", required: true %>
+      <%= f.email_field :email, class: "form-control", placeholder: "bark@example.com", required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_phone">Phone</label>
-    <div class="input-group input-group-lg">
+    <label for="demo_wuphf_phone">Recipient Phone</label>
+    <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-phone fa-fw"></i></div>
-      <%= f.text_field :phone, class: "form-control form-control-lg", placeholder: "xxx-xxx-xxxx", maxlength: 12, required: true, pattern: '^\d{3}-\d{3}-\d{4}$' %>
+      <%= f.text_field :phone, class: "form-control", placeholder: "xxx-xxx-xxxx", maxlength: 12, required: true, pattern: '^\d{3}-\d{3}-\d{4}$' %>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_twitter_handle">Twitter</label>
-    <div class="input-group input-group-lg">
+    <label for="demo_wuphf_twitter_handle">Recipient Twitter</label>
+    <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-at fa-fw"></i></div>
-      <%= f.text_field :twitter_handle, class: "form-control form-control-lg", placeholder: "username", required: true %>
+      <%= f.text_field :twitter_handle, class: "form-control", placeholder: "username", required: true %>
     </div>
   </div>
 
   <div class="form-group">
     <label for="demo_wuphf_message">Message</label>
-    <div class="input-group input-group-lg">
+    <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-comments-o fa-fw"></i></div>
-      <%= f.text_area :message, class: "form-control form-control-lg", placeholder: "Bears. Beats. Battlestar Galatica.", maxlength: 140, required: true %>
+      <%= f.text_area :message, class: "form-control", placeholder: "Bears. Beats. Battlestar Galatica.", maxlength: 140, required: true %>
     </div>
   </div>
 

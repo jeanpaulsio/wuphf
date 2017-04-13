@@ -16,6 +16,14 @@ textarea {
   font-weight: 200;
 }
 
+.text-bold {
+  font-weight: 600;
+}
+
+.text-orange {
+  color: $orange
+}
+
 // Home
 #hero{
   background: linear-gradient(rgba(252, 133, 46, .90), rgba(252, 133, 46, .70)),
