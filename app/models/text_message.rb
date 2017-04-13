@@ -8,6 +8,7 @@ class TextMessage
   def initialize(options = {})
     @message = options.message
     @phone   = options.phone
+    @from    = options.from
     boot_twilio
   end
 
@@ -15,7 +16,7 @@ class TextMessage
     message = @client.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: @phone,
-      body: @message
+      body: "WUPHF FROM #{@from.upcase}:" + @message
     )
   end
 
