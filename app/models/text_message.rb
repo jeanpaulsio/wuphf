@@ -16,7 +16,7 @@ class TextMessage
     message = @client.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: @phone,
-      body: "WUPHF FROM #{@from.upcase}:" + @message
+      body: "WUPHF FROM #{@from.upcase}: " + @message
     )
   end
 
