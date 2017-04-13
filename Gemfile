@@ -5,20 +5,29 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails',        '~> 5.0.2'
-gem 'pg',           '~> 0.18'
-gem 'puma',         '~> 3.0'
-gem 'sass-rails',   '~> 5.0'
-gem 'uglifier',     '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'rails',            '~> 5.0.2'
+gem 'pg',               '~> 0.18'
+gem 'puma',             '~> 3.0'
+gem 'sass-rails',       '~> 5.0'
+gem 'uglifier',         '>= 1.3.0'
+gem 'coffee-rails',     '~> 4.2'
 gem 'jquery-rails'
-gem 'turbolinks',   '~> 5'
-gem 'jbuilder',     '~> 2.5'
-
+gem 'turbolinks',       '~> 5'
+gem 'jbuilder',         '~> 2.5'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 gem 'figaro',           '~> 1.1', '>= 1.1.1'
-gem 'bootstrap',        '~> 4.0.0.alpha6'
 
+
+# Styling
+gem 'animate-rails',      '~> 1.0', '>= 1.0.10'
+gem 'bootstrap',          '~> 4.0.0.alpha6'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
+# External APIs
 gem 'twilio-ruby',      '~> 4.13'
 gem 'twitter',          '~> 6.1'
 

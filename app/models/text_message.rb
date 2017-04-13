@@ -5,11 +5,6 @@ class TextMessage
 
   attr_accessor :message, :phone
 
-  PHONE_NUMBER_REGEX = /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
-
-  validates :message, presence: true
-  validates :phone,   presence: true, format: { with: PHONE_NUMBER_REGEX }
-
   def initialize(options = {})
     @message = options.message
     @phone   = options.phone

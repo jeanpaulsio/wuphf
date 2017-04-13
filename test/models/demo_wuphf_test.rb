@@ -2,13 +2,46 @@ require 'test_helper'
 
 class DemoWuphfTest < ActiveSupport::TestCase
   def setup
-    @demo_wuphf = DemoWuphf.new(from: "Ryan", to: "Michael", message: "Test Wuphf!",
-                                email: "michaelscott@test.com", phone: "9097533874",
-                                twitter_handle: "jeanpaulsio")
+    @demo_wuphf = demo_wuphfs(:bark)
   end
 
   test "demo_wuphf should be valid" do
     assert @demo_wuphf.valid?
+  end
+
+  # From and To Validations
+  test "from name should be present" do
+    @demo_wuphf.from = "  "
+    assert_not @demo_wuphf.valid?
+  end
+
+  test "to name should be present" do
+    @demo_wuphf.to = "   "
+    assert_not @demo_wuphf.valid?
+  end
+
+  # Phone Validations
+  test "phone number should be present" do
+    @demo_wuphf.phone = "  "
+    assert_not @demo_wuphf.valid?
+  end
+
+  test "phone validation should accept valid phone numbers" do
+    valid_phone_numbers = ["909-123-4567", "9091234567", "909.123.4567"]
+
+    valid_phone_numbers.each do |valid_number|
+      @demo_wuphf.phone = valid_number
+      assert @demo_wuphf.valid?, "#{valid_number.inspect} should be valid"
+    end
+  end
+
+  test "phone validation should reject invalid phone numbers" do
+    invalid_phone_numbers = ["909-123-457", "909", "909.12.234"]
+
+    invalid_phone_numbers.each do |invalid_number|
+      @demo_wuphf.phone = invalid_number
+      assert_not @demo_wuphf.valid?, "#{invalid_number.inspect} should be invalid"
+    end
   end
 
   # Message Validations
@@ -58,5 +91,15 @@ class DemoWuphfTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @demo_wuphf.reload.email
   end
 
+  # Twitter Handle Validations
+  test "twitter handle should exist" do
+    @demo_wuphf.twitter_handle = "  "
+    assert_not @demo_wuphf.valid?
+  end
+
+  test "twitter handle should be no longer than 15 characters" do
+    @demo_wuphf.twitter_handle = "a" * 16
+    assert_not @demo_wuphf.valid?
+  end
 
 end
