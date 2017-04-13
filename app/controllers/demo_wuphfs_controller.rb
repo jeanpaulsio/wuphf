@@ -1,4 +1,8 @@
 class DemoWuphfsController < ApplicationController
+  def index
+    redirect_to new_demo_wuphf_path
+  end
+
   def new
     @demo_wuphf = DemoWuphf.new
   end
