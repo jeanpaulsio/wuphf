@@ -1,0 +1,2 @@
+class DemoTweet
+end
