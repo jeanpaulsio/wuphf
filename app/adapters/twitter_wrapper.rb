@@ -5,6 +5,18 @@ class TwitterWrapper
     boot_twitter
   end
 
+  def consumer
+    OAuth::Consumer.new(ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'], :site => "https://twitter.com")
+  end
+
+  def request_token(consumer, hsh)
+    OAuth::RequestToken.from_hash(consumer, hsh)
+  end
+
+  def callback_url
+    "http://localhost:3000/demo_wuphfs/show"
+  end
+
   def tweet
     @client.update(message)
   end
