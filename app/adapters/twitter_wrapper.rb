@@ -1,13 +1,12 @@
 class TwitterWrapper
-  def initialize(options = {})
-    @twitter_handle = options.twitter_handle
-    @message        = options.message
+  attr_accessor :twitter_handle, :message
 
+  def initialize
     boot_twitter
   end
 
-  def send
-    @client.update("@" + @twitter_handle + " " + @message)
+  def tweet
+    @client.update(message)
   end
 
   private
@@ -21,3 +20,4 @@ class TwitterWrapper
       end
     end
 end
+

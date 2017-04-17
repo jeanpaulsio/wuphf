@@ -1,7 +1,5 @@
 class DemoWuphfsController < ApplicationController
   def index
-    # redirect_to new_demo_wuphf_path
-
     @callback_url = "http://localhost:3000/demo_wuphfs/show"
     @consumer     = OAuth::Consumer.new(ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'], :site => "https://twitter.com")
     @request_token = @consumer.get_request_token(:oauth_callback => @callback_url)
@@ -9,10 +7,6 @@ class DemoWuphfsController < ApplicationController
     session[:token] = @request_token.token
     session[:token_secret] = @request_token.secret
     redirect_to @request_token.authorize_url(:oauth_callback => @callback_url)
-
-    hash = { oauth_token: session[:token], oauth_token_secret: session[:token_secret]}
-    request_token  = OAuth::RequestToken.from_hash(@consumer, hash)
-    # @access_token = @request_token.get_access_token
   end
 
   def show

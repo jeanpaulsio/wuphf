@@ -1,13 +1,11 @@
 class TwilioWrapper
-  def initialize(options = {})
-    @message = options.message
-    @phone   = options.phone
-    @from    = options.from
+  attr_accessor :message, :phone, :from
 
+  def initialize
     boot_twilio
   end
 
-  def send
+  def send_sms
     @client.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: @phone,

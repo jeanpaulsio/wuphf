@@ -14,10 +14,17 @@ class SendDemoWuphf
   end
 
   def send_text
-    TwilioWrapper.new(@demo_wuphf).send
+    twilio = TwilioWrapper.new
+    twilio.message = @demo_wuphf.message
+    twilio.phone   = @demo_wuphf.phone
+    twilio.from    = @demo_wuphf.from
+    twilio.send_sms
   end
 
   def send_tweet
-    TwitterWrapper.new(@demo_wuphf).send
+    twitter = TwitterWrapper.new
+    twitter.message        = @demo_wuphf.message
+    twitter.twitter_handle = @demo_wuphf.twitter_handle
+    twitter.tweet
   end
 end
