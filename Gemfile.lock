@@ -151,6 +151,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    oauth (0.5.1)
     pg (0.20.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -279,6 +280,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   minitest-reporters (~> 1.1, >= 1.1.14)
+  oauth (~> 0.5.1)
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.2)

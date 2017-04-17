@@ -16,6 +16,7 @@ gem 'turbolinks',       '~> 5'
 gem 'jbuilder',         '~> 2.5'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 gem 'figaro',           '~> 1.1', '>= 1.1.1'
+gem 'oauth',            '~> 0.5.1'
 
 group :development do
   gem 'rails_real_favicon'
