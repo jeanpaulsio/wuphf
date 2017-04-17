@@ -1,22 +1,17 @@
-class TextMessage
-  include ActiveModel::Validations
-  include ActiveModel::Conversion
-  extend ActiveModel::Naming
-
-  attr_accessor :message, :phone
-
+class TwilioWrapper
   def initialize(options = {})
     @message = options.message
     @phone   = options.phone
     @from    = options.from
+
     boot_twilio
   end
 
   def send
-    message = @client.messages.create(
+    @client.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: @phone,
-      body: "WUPHF FROM #{@from.upcase}: " + @message
+      body: "#{@from.upcase} WUPHF'D: " + @message
     )
   end
 
