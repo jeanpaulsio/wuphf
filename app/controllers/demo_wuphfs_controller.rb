@@ -33,7 +33,7 @@ class DemoWuphfsController < ApplicationController
     if @demo_wuphf.save
       SendDemoWuphf.new(@demo_wuphf).execute
 
-      flash[:success] = "WUPHF WUPHF! YOU HAVE SENT A WUPHF!"
+      flash[:success] = "WUPHF WUPHF! YOU JUST DEMO'D WUPHF!"
       redirect_to new_demo_wuphf_path
     else
       render 'new'
