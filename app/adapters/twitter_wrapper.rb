@@ -18,7 +18,7 @@ class TwitterWrapper
   end
 
   def tweet
-    @client.update(message)
+    @client.update("@#{twitter_handle} #{message}")
   end
 
   private
