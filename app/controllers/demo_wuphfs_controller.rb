@@ -11,6 +11,10 @@ class DemoWuphfsController < ApplicationController
     @demo_wuphf = DemoWuphf.new(demo_wuphf_params)
 
     if @demo_wuphf.save
+      WuphfMailer.wuphf_mail(@demo_wuphf).deliver_now
+      TextMessage.new(@demo_wuphf).send
+      Tweet.new(@demo_wuphf).send
+
       flash[:success] = "WUPHF WUPHF! YOU HAVE SENT A WUPHF!"
       redirect_to new_demo_wuphf_path
     else
