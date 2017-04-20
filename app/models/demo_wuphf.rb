@@ -6,7 +6,7 @@ class DemoWuphf < ApplicationRecord
 
   validates :from,           presence: true, length: { maximum: 20 }
   validates :to,             presence: true, length: { maximum: 20 }
-  validates :message,        presence: true, length: { maximum: 123 }
+  validates :message,        presence: true, length: { maximum: 140 }
   validates :email,          presence: true, length: { maximum: 255 },
                              format: { with: VALID_EMAIL_REGEX }
   validates :phone,          presence: true,

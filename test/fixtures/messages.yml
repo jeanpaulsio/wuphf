@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  content: MyString
-  user: one
-  recipient: one
+first_message:
+  content: this is the first message
+  user: michael
+  recipient: jim
 
-two:
-  content: MyString
-  user: two
-  recipient: two
+second_message:
+  content: this is the second message
+  user: michael
+  recipient: pam

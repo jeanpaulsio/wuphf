@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
-  phone: MyString
-  twitter_handle: MyString
-  facebook_id: MyString
-  user: one
+jim:
+  name: jim
+  email: jim@test.com
+  phone: "9496405333"
+  twitter_handle: wuphfwuphf
+  facebook_id: wuphfwuphf
+  user: michael
 
-two:
-  name: MyString
-  email: MyString
-  phone: MyString
-  twitter_handle: MyString
-  facebook_id: MyString
-  user: two
+pam:
+  name: pam
+  email: pam@test.com
+  phone: "9496405333"
+  twitter_handle: wuphfwuphf
+  facebook_id: wuphfwuphf
+  user: michael
