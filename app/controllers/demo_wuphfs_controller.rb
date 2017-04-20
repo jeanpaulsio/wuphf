@@ -1,26 +1,10 @@
 class DemoWuphfsController < ApplicationController
   def index
-    # twitter       = TwitterWrapper.new
-    # request_token = twitter.consumer.get_request_token(:oauth_callback => twitter.callback_url)
-
-    # session[:token]        = request_token.token
-    # session[:token_secret] = request_token.secret
-    # redirect_to request_token.authorize_url(:oauth_callback => twitter.callback_url)
+    redirect_to new_demo_wuphf_path
   end
 
   def show
-    # twitter = TwitterWrapper.new
-
-    # hash = { oauth_token: session[:token], oauth_token_secret: session[:token_secret]}
-    # request_token = twitter.request_token(twitter.consumer, hash)
-    # access_token  = request_token.get_access_token oauth_verifier: params[:oauth_verifier]
-
-    # @client = Twitter::REST::Client.new do |config|
-    #   config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
-    #   config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
-    #   config.access_token        = access_token.token
-    #   config.access_token_secret = access_token.secret
-    # end
+    redirect_to new_demo_wuphf_path
   end
 
   def new

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'demo_wuphfs#new'
 
-  get 'dashboard' => 'recipients#index'
+  get 'dashboard'                 => 'dashboard#home'
+  get 'dashboard/twitter_enabled' => 'dashboard#twitter_enabled'
+  get 'dashboard/twitter_auth'    => 'dashboard#twitter_auth'
 
   # Devise
   devise_for :users
