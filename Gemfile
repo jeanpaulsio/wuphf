@@ -16,12 +16,14 @@ gem 'turbolinks',       '~> 5'
 gem 'jbuilder',         '~> 2.5'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 gem 'figaro',           '~> 1.1', '>= 1.1.1'
-gem 'oauth',            '~> 0.5.1'
-gem 'koala',            '~> 3.0'
 
 group :development do
   gem 'rails_real_favicon'
 end
+
+# Auth
+gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'oauth',  '~> 0.5.1'
 
 # Styling
 gem 'animate-rails',      '~> 1.0', '>= 1.0.10'
@@ -33,8 +35,9 @@ source 'https://rails-assets.org' do
 end
 
 # External APIs
-gem 'twilio-ruby',      '~> 4.13'
-gem 'twitter',          '~> 6.1'
+gem 'twilio-ruby', '~> 4.13'
+gem 'twitter',     '~> 6.1'
+gem 'koala',       '~> 3.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
