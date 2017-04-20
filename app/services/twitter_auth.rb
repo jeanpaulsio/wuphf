@@ -8,6 +8,7 @@ class TwitterAuth
   end
 
   def callback_url
-    "http://localhost:3000/dashboard/twitter_enabled"
+    return "http://localhost:3000/dashboard/twitter_enabled" if Rails.env.development?
+    return "http://wuphf.io/dashboard/twitter_enabled" if Rails.env.production?
   end
 end

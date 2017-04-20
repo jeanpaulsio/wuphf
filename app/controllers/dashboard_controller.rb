@@ -7,6 +7,9 @@ class DashboardController < ApplicationController
       secret   = current_user.twitter_secret_digest
       @twitter = TwitterWrapper.new(token, secret)
     end
+
+    @recipient = current_user.recipients.build
+    @recipients ||= current_user.recipients
   end
 
   def twitter_auth
@@ -23,18 +26,12 @@ class DashboardController < ApplicationController
   def twitter_enabled
     twitter_auth     = TwitterAuth.new
     token_and_secret = { oauth_token: session[:token], oauth_token_secret: session[:token_secret]}
-
     request_token    = twitter_auth.request_token(twitter_auth.consumer, token_and_secret)
     access_token     = request_token.get_access_token(oauth_verifier: params[:oauth_verifier])
 
-    user = current_user
+    current_user.update_attribute(:twitter_token_digest, access_token.token)
+    current_user.update_attribute(:twitter_secret_digest, access_token.secret)
 
-    user.update_attribute(:twitter_token_digest, access_token.token)
-    user.update_attribute(:twitter_secret_digest, access_token.secret)
-
-    token  = user.twitter_token_digest
-    secret = user.twitter_secret_digest
-
-    @twitter = TwitterWrapper.new(token, secret)
+    redirect_to dashboard_url
   end
 end

@@ -1,5 +1,40 @@
-dashboard/home
-
 <%= link_to "Link Twitter", dashboard_twitter_auth_path %>
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<hr>
+<!--  -->
+  <div class="sandbox">
+    <select id="select-recipient" placeholder="Select a person...">
+      <option value="">Select a person...</option>
+      <% @recipients.each do |recipient| %>
+        <option><%= recipient.email %></option>
+      <% end %>
+    </select>
+  </div>
+  <script class="show">
+  $('#select-recipient').selectize({
+    create: false,
+    sortField: 'text'
+  });
+  </script>
+<!--  -->
 
-<% console %>
+<hr>
+
+<% @recipients.each do |recipient| %>
+  <%= recipient.email %><br>
+<% end %>
+
+<hr>
+
+<%= form_for @recipient, :url => url_for(:controller => 'recipients', :action => 'create') do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %> <br>
+
+  <%= f.label :phone %>
+  <%= f.text_field :phone %> <br>
+
+  <%= f.submit 'create' %>
+<% end %>
