@@ -1,17 +1,16 @@
 <%= link_to "Link Twitter", dashboard_twitter_auth_path %>
-<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <hr>
 <!--  -->
 <h2>submit a wuphf here</h2>
-    <select id="select-recipient" placeholder="Select a person...">
-      <option value="">Select a person...</option>
-      <% @recipients.each do |recipient| %>
-        <option><%= recipient.email %></option>
-      <% end %>
-    </select>
-  <script>
-  $('#select-recipient').selectize();
-  </script>
+<select id="select-recipient" placeholder="Select a person...">
+  <option value="">Select a person...</option>
+  <% @recipients.each do |recipient| %>
+    <option><%= recipient.email %></option>
+  <% end %>
+</select>
+<script>
+$('#select-recipient').selectize();
+</script>
 <!--  -->
 
 <hr>

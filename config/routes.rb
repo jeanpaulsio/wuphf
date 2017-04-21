@@ -5,8 +5,18 @@ Rails.application.routes.draw do
   get 'dashboard/twitter_enabled' => 'dashboard#twitter_enabled'
   get 'dashboard/twitter_auth'    => 'dashboard#twitter_auth'
 
-  # Devise
-  devise_for :users
+  # Devise - Removes ability to remove account
+  devise_for :users, skip: :registrations
+  devise_scope :user do
+    resource :registration,
+      only: [:new, :create, :edit, :update],
+      path: 'users',
+      path_names: { new: 'sign_up' },
+      controller: 'devise/registrations',
+      as: :user_registration do
+        get :cancel
+      end
+  end
 
   # Resource Routes
   resources :demo_wuphfs

@@ -8,3 +8,5 @@ class User < ApplicationRecord
     return true if self.twitter_token_digest && self.twitter_secret_digest
   end
 end
+
+

@@ -8,6 +8,8 @@ class DemoWuphfsController < ApplicationController
   end
 
   def new
+    redirect_to dashboard_path if user_signed_in?
+
     @demo_wuphf = DemoWuphf.new
   end
 
