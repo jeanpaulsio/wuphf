@@ -1,16 +1,15 @@
 class RecipientsController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_recipient, only: [:edit, :update, :destroy]
 
   def new
     @recipient = current_user.recipients.build
   end
 
   def edit
-    @recipient = Recipient.find(params[:id])
   end
 
   def update
-    @recipient = Recipient.find(params[:id])
     if @recipient.update_attributes(recipient_params)
       flash[:success] = "WUPHF! Changes Saved!"
       redirect_to dashboard_path
@@ -33,7 +32,7 @@ class RecipientsController < ApplicationController
   end
 
   def destroy
-    Recipient.find(params[:id]).destroy
+    @recipient.destroy
     flash[:success] = "WUPHF! Removed from Dog Pack!"
     redirect_to dashboard_path
   end
@@ -41,5 +40,9 @@ class RecipientsController < ApplicationController
   private
     def recipient_params
       params.require(:recipient).permit(:name, :email, :phone, :twitter_handle, :facebook_id, :user_id)
+    end
+
+    def find_recipient
+      @recipient = Recipient.find(params[:id])
     end
 end
