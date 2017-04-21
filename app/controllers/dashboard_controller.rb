@@ -9,6 +9,7 @@ class DashboardController < ApplicationController
     end
 
     @recipients = current_user.recipients
+    @message    = current_user.messages.build
   end
 
   def twitter_auth

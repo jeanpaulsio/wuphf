@@ -1,0 +1,15 @@
+<div class="col-lg-4">
+  <%= link_to new_recipient_path, class:"add-to-dog-pack" do %>
+    <div class="card card-inverse bg-purple mb-3 text-center">
+      <div class="card-block">
+        <blockquote class="card-blockquote">
+          <h4>ADD 2 DOG PACK</h4>
+          <p class="mt-3">Click here to add some more peeps to your Dog Pack! Remember, the more people you have in your Dog Pack, the more people that you can WUPHF.</p>
+          <% if @recipients.empty? %>
+            <p>Looks like ya got no one in your Dog Pack. Let's add some puppies!</p>
+          <% end %>
+        </blockquote>
+      </div>
+    </div>
+  <% end %>
+</div>

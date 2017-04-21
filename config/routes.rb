@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   # Resource Routes
   resources :demo_wuphfs
   resources :recipients
+  resources :messages
 end

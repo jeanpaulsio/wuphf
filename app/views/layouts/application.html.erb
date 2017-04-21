@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WUPHF</title>
+    <title>WUPHF | Whenever. Wherever.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
 
@@ -15,6 +15,7 @@
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/flash_alerts' %>
     <%= yield %>
+    <%= yield :page_js %>
     <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -32,7 +32,6 @@ Currently, Wuphf'ing from the landing page will:
 
 ## TODO
 
-* Create User Registrations (w/ OAuth)
-  - a registered user can create a `friend` object that they may send wuphfs too
-  - a registered user can send tweets and DMs through their own twitter account
-  - a registered user can post on their friend's facebook wall
+* Connect to Facebook's Graph API
+* Actually send a registered User's WUPHF's
+* Integration Tests for Dashboard

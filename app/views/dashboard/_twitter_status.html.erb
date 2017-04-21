@@ -1,0 +1,13 @@
+<div class="card mt-3 mb-3 text-center border-0">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <strong>
+        <% if twitter_is_connected? %>
+          Your Twitter Is Connected! Your WUPHF's will now send Twitter DM's to Dog Pack Members!
+        <% else %>
+          Your Twitter Is Not Connected. You will not be able to send Twitter DM's to Dog Pack members! <%= link_to "Link Now!", dashboard_twitter_auth_path %>
+        <% end %>
+      </strong>
+    </blockquote>
+  </div>
+</div>

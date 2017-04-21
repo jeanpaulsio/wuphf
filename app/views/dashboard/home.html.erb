@@ -1,41 +1,26 @@
-<!--
-<h2>Link Social Media Accounts Here</h2>
-<%= link_to "Link Twitter", dashboard_twitter_auth_path %>
- -->
-
-<!-- form to submit a wuphf -->
-<!-- <h2>submit a wuphf here</h2>
-<select id="select-recipient" placeholder="Select a person...">
-  <option value="">Select a person...</option>
-  <% @recipients.each do |recipient| %>
-    <option><%= recipient.email %></option>
-  <% end %>
-</select>
-<script>
-$('#select-recipient').selectize();
-</script> -->
-
 <div class="container">
+
   <section class="text-center p-3">
     <%= image_tag("dogs_orange.svg",size: "600", alt: "Create a Dog Pack", class: "img-fluid") %>
   </section>
+
+  <div class="card bg-faded mt-3 mb-3 p-5 border-0">
+    <h5><i>TODO: this doesn't send anything yet</i></h5>
+    <%= render 'dashboard/wuphf_form' %>
+  </div>
+
+  <%= render 'dashboard/twitter_status' %>
+
   <div class="card-deck">
-
-    <div class="col-lg-4">
-      <%= link_to new_recipient_path, class:"add-to-dog-pack" do %>
-        <div class="card card-inverse bg-purple mb-3 text-center">
-          <div class="card-block">
-            <blockquote class="card-blockquote">
-              <h4>ADD 2 DOG PACK</h4>
-              <p class="mt-3">Click here to add some more peeps to your Dog Pack! Remember, the more people you have in your Dog Pack, the more people that you can WUPHF.</p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    <% end %>
-
+    <%= render 'dashboard/add_to_dogpack' %>
     <%= render @recipients %>
   </div>
 </div>
 
 <hr>
+
+<% content_for :page_js do %>
+  <script type="text/javascript">
+    <%= render file: "#{Rails.root}/app/views/dashboard/js/wuphf_form.js" %>
+  </script>
+<% end %>
