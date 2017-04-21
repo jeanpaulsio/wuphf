@@ -19,6 +19,7 @@ gem 'figaro',           '~> 1.1', '>= 1.1.1'
 gem 'faker',            '~> 1.7', '>= 1.7.3'
 gem 'selectize-rails',  '~> 0.12.4'
 
+
 group :development do
   gem 'rails_real_favicon'
 end

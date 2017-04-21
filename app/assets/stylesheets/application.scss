@@ -23,7 +23,7 @@ textarea { resize: none }
 .bg-purple { background: $state-success-bg }
 .border-white { border-color: white }
 
-.alert-notice {
+.alert-notice, .alert-alert {
   background: $state-success-bg;
   color: $state-success-text;
 }
