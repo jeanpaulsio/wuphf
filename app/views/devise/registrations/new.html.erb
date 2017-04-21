@@ -6,10 +6,18 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
+        <%= f.label :name %>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-id-card-o fa-fw"></i></div>
+          <%= f.text_field :name, autofocus: true, placeholder: "Your Name", class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
         <%= f.label :email %>
         <div class="input-group">
           <div class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></div>
-          <%= f.email_field :email, autofocus: true, placeholder: "bark@example.com", class: "form-control" %>
+          <%= f.email_field :email, placeholder: "bark@example.com", class: "form-control" %>
         </div>
       </div>
 

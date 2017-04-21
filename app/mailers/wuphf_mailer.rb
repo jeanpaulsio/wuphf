@@ -2,8 +2,10 @@ class WuphfMailer < ApplicationMailer
   default from: 'noreply@wuphf.io'
 
   def wuphf_mail(wuphf)
-    @wuphf = wuphf
+    @email   = wuphf[:email]
+    @message = wuphf[:message]
+    @from    = wuphf[:from]
 
-    mail(to: @wuphf.email, subject: "WUPHF FROM #{@wuphf.from.upcase}!")
+    mail(to: @email, subject: "WUPHF FROM #{@from.upcase}!")
   end
 end

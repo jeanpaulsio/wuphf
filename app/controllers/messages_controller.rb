@@ -3,6 +3,8 @@ class MessagesController < ApplicationController
     @message = current_user.messages.build(message_params)
 
     if @message.save
+      SendWuphf.new(@message).execute
+
       flash[:success] = "YOU WUPHF'D: #{Recipient.find(@message.recipient_id).name}"
       redirect_to dashboard_path
     else

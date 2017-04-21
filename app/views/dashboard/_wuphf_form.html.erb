@@ -1,6 +1,6 @@
 <%= form_for @message do |f| %>
   <div class="form-group">
-    <%= f.label :to %>
+    <%= f.label :to, "To:" %>
     <select id="select-recipient" name="message[recipient_id]" placeholder="WUPHF someone from your Dog Pack" class="form-control">
       <option value="">WUPHF someone from your Dog Pack</option>
       <% @recipients.each do |recipient| %>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :content, "Message (140 Character Limit)" %>
+    <%= f.label :content, "Message (140 Character Limit):" %>
     <%= f.text_area :content, class: "form-control", maxlength: 140, required: true %>
   </div>
 
