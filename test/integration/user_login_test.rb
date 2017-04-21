@@ -10,7 +10,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
 
   test "successfully signs in a user" do
     get new_user_session_path
-    assert_select 'input[value=?]', 'Log in'
+    assert_select 'input[value=?]', 'Sign in'
     post user_session_path, params: @valid_params
 
     follow_redirect!
