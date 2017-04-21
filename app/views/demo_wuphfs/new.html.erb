@@ -7,7 +7,40 @@
     </div>
 
     <div class="col-lg-6 offset-lg-1 pt-3 bg-faded">
+      <h3 class="text-orange text-bold">Demo WUPHF Here <i class="fa fa-fw fa-hand-o-down"></i></h3>
       <%= render 'form' %>
     </div>
+  </div>
+</div>
+
+<div class="bg-purple text-white p-5">
+  <div class="container">
+    <%= image_tag("dog_bubble.svg",size: "200", alt: "That's What She Said!", class: "img-fluid pb-2") %>
+    <h4 class="text-bold">3 Reasons to Sign Up:</h4>
+    <hr>
+    <div class="row m-3 pb-3">
+      <h4 class="text-bold"><i class="fa fa-fw fa-refresh"></i> Turned Tables</h4>
+      <p class="text-left p-1 mb-3">
+        That's right, the turn tables. Worried that your friends aren't seeing your messages? Or maybe they're ignoring you. By registering for WUPHF.io you can be sure to blast all of their lines in one go. Email? Covered. Text? We got that too. Twitter? Oh yeah. Facebook? Well... that's coming soon.
+      </p>
+
+      <h4 class="text-bold"><i class="fa fa-fw fa-calculator"></i> Numbers Crunched</h4>
+      <p class="text-left p-1 mb-3">
+        Sign up today and we'll crunch all of the numbers for you. What numbers do you need crunching? Because we'll crunch them and we'll crunch them good. What does that have to do with WUPHF? I don't know, you tell me.
+      </p>
+
+      <h4 class="text-bold"><i class="fa fa-fw fa-bank"></i> Bankruptcy Declared</h4>
+      <p class="text-left p-1 mb-3">
+        Having a hard time declaring bankruptcy? WUPHF is a great place to declare bankruptcy to all of your friends and family. In fact, you can WUPHF about your bankruptcy to people who aren't your friends - as long as they're in your Dog Pack. Oh yeah, I should talk about the DOG PACK. Register to find out more
+      </p>
+    </div>
+
+    <hr>
+
+    <%= link_to new_user_registration_path, class: "text-white" do %>
+      <section class="text-center">
+        <button class="btn btn-lg btn-outline-primary text-white border-white mt-3">Get Started Today</button>
+      </section>
+    <% end %>
   </div>
 </div>
