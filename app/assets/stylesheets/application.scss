@@ -10,84 +10,31 @@
 @import "font-awesome";
 
 // Global
-textarea {
-  resize: none;
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-.btn-square {
-  border-radius: 0;
-}
-
-.text-thin {
-  font-weight: 200;
-}
-
-.text-bold {
-  font-weight: 600;
-}
-
-.text-orange {
-  color: $orange
-}
+textarea { resize: none }
+.btn-square { border-radius: 0 }
+.text-thin { font-weight: 200 }
+.text-bold { font-weight: 600 }
+.text-orange { color: $orange }
 
 // Home
 #hero{
-  background: linear-gradient(rgba(252, 133, 46, .90), rgba(252, 133, 46, .70)),
-                          url('https://static.pexels.com/photos/26128/pexels-photo-26128.jpg');
-  background-size: cover;
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  height: 75vh;
-}
-
-.header{
-  position: absolute;
-  top: 50%;
-  text-align: center;
+  background: $orange;
+  height: auto;
   width: 100%;
-  color: #fff;
-          transform: translate(0,-50%);
-      -ms-transform: translate(0,-50%); /* IE 9 */
-  -webkit-transform: translate(0,-50%); /* Safari */
-  i {
-    font-size: 2em;
-    animation-iteration-count: infinite;
-  }
-  h1 {
-    font-weight: 200;
-    color: white;
+  text-align: center;
+  img {
+    display: block;
+    margin: auto;
+    padding-top: 3em;
   }
   h3 {
     color: white;
-    margin-bottom: 2em;
-  }
-  @include media-breakpoint-up(xs) {
-    h1 { font-size: 2em; }
-    h3 { font-size: 1.5em; }
-  }
-  @include media-breakpoint-up(sm) {
-    h1 { font-size: 2em; }
-    h3 { font-size: 1.5em; }
-  }
-
-  @include media-breakpoint-up(md) {
-    h1 { font-size: 3em; }
-    h3 { font-size: 1.7em; }
-  }
-
-  @include media-breakpoint-up(lg) {
-    h1 { font-size: 4em; }
-    h3 { font-size: 2em; }
-  }
-  img {
-    margin-bottom: 2em;
-  }
-  button {
-    font-weight: 200;
-    font-size: 1em;
-    padding: 1em 2.5em;
-    border-color: white;
+    padding-bottom: 3em;
   }
 }

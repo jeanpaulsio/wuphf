@@ -2,30 +2,28 @@
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <hr>
 <!--  -->
-  <div class="sandbox">
+<h2>submit a wuphf here</h2>
     <select id="select-recipient" placeholder="Select a person...">
       <option value="">Select a person...</option>
       <% @recipients.each do |recipient| %>
         <option><%= recipient.email %></option>
       <% end %>
     </select>
-  </div>
-  <script class="show">
-  $('#select-recipient').selectize({
-    create: false,
-    sortField: 'text'
-  });
+  <script>
+  $('#select-recipient').selectize();
   </script>
 <!--  -->
 
 <hr>
 
+<h2>dogpack goes here</h2>
 <% @recipients.each do |recipient| %>
   <%= recipient.email %><br>
 <% end %>
 
 <hr>
 
+<h2>create a dogpack member here</h2>
 <%= form_for @recipient, :url => url_for(:controller => 'recipients', :action => 'create') do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %> <br>
