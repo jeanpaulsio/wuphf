@@ -22,6 +22,11 @@ textarea { resize: none }
 .text-bold { font-weight: 600 }
 .text-orange { color: $orange }
 
+.alert-notice {
+  background: $state-success-bg;
+  color: $state-success-text;
+}
+
 // Home
 #hero{
   background: $orange;
