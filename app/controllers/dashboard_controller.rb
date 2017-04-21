@@ -34,4 +34,11 @@ class DashboardController < ApplicationController
 
     redirect_to dashboard_url
   end
+
+  def twitter_unlink
+    current_user.update_attribute(:twitter_token_digest, nil)
+    current_user.update_attribute(:twitter_secret_digest, nil)
+
+    redirect_to dashboard_url
+  end
 end
