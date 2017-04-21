@@ -16,7 +16,7 @@
       </li>
     </ul>
     <div class="card-footer">
-      <a href="#" class="card-link">Edit</a>
+      <%= link_to "Edit", edit_recipient_path(recipient) %>
       <%= link_to "Remove From Dog Pack", recipient, method: :delete, data: { confirm: 'Are You Sure?' }, class: "card-link pull-right" %>
     </div>
   </div>

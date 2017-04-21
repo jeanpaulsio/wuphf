@@ -16,9 +16,24 @@ $('#select-recipient').selectize();
 </script> -->
 
 <div class="container">
-  <h2 class="mt-3 mb-3">Your Dog Pack</h2>
-
+  <section class="text-center p-3">
+    <%= image_tag("dogs_orange.svg",size: "600", alt: "Create a Dog Pack", class: "img-fluid") %>
+  </section>
   <div class="card-deck">
+
+    <div class="col-lg-4">
+      <%= link_to new_recipient_path, class:"add-to-dog-pack" do %>
+        <div class="card card-inverse bg-purple mb-3 text-center">
+          <div class="card-block">
+            <blockquote class="card-blockquote">
+              <h4>ADD 2 DOG PACK</h4>
+              <p class="mt-3">Click here to add some more peeps to your Dog Pack! Remember, the more people you have in your Dog Pack, the more people that you can WUPHF.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <%= render @recipients %>
   </div>
 </div>

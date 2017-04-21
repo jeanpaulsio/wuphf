@@ -21,10 +21,17 @@ textarea { resize: none }
 .text-thin { font-weight: 200 }
 .text-bold { font-weight: 600 }
 .text-orange { color: $orange }
+.bg-purple { background: $state-success-bg }
 
 .alert-notice {
   background: $state-success-bg;
   color: $state-success-text;
+}
+
+.add-to-dog-pack {
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 // Home
