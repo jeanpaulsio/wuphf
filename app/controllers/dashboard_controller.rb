@@ -8,8 +8,7 @@ class DashboardController < ApplicationController
       @twitter = TwitterWrapper.new(token, secret)
     end
 
-    @recipient = current_user.recipients.build
-    @recipients ||= current_user.recipients
+    @recipients = current_user.recipients
   end
 
   def twitter_auth

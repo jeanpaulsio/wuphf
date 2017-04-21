@@ -2,7 +2,7 @@ class Recipient < ApplicationRecord
   before_save :downcase_email
 
   belongs_to :user
-  has_many :messages
+  has_many :messages, :dependent => :destroy
 
   VALID_EMAIL_REGEX  = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_PHONE_REGEX = /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
