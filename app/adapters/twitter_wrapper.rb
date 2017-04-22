@@ -9,6 +9,10 @@ class TwitterWrapper
     @client.update("@#{twitter_handle} #{message}")
   end
 
+  def direct_message
+    @client.create_direct_message("@#{twitter_handle}", message)
+  end
+
   private
 
     def boot_twitter(token, secret)

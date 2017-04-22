@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'dashboard/twitter_enabled' => 'dashboard#twitter_enabled'
   get 'dashboard/twitter_auth'    => 'dashboard#twitter_auth'
   get 'dashboard/twitter_unlink'  => 'dashboard#twitter_unlink'
+  get 'investors'                 => 'pages#investors'
 
   # Devise - Removes ability to remove account
   devise_for :users, skip: :registrations

@@ -2,14 +2,14 @@
   <div class="card mb-3">
     <h5 class="card-header text-center"><%= recipient.name || "--"  %></h5>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">
+      <li class="list-group-item border-0">
         <i class="fa fa-fw fa-envelope-o text-orange mr-2"></i> <%= recipient.email %>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item border-0">
         <i class="fa fa-fw fa-phone text-orange mr-2"></i> <%= recipient.phone %>
       </li>
-      <li class="list-group-item">
-        <i class="fa fa-fw fa-twitter text-orange mr-2"></i> <%= recipient.twitter_handle %>
+      <li class="list-group-item border-0">
+        <i class="fa fa-fw fa-twitter text-orange mr-2"></i> @<%= recipient.twitter_handle %>
       </li>
       <!--
       <li class="list-group-item">
@@ -19,7 +19,7 @@
     </ul>
     <div class="card-footer">
       <%= link_to "Edit", edit_recipient_path(recipient) %>
-      <%= link_to "Remove From Dog Pack", recipient, method: :delete, data: { confirm: 'Are You Sure?' }, class: "card-link pull-right" %>
+      <%= link_to "Delete", recipient, method: :delete, data: { confirm: 'Are You Sure?' }, class: "pull-right" %>
     </div>
   </div>
 </div>

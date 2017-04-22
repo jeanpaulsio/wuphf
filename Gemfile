@@ -18,7 +18,7 @@ gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 gem 'figaro',           '~> 1.1', '>= 1.1.1'
 gem 'faker',            '~> 1.7', '>= 1.7.3'
 gem 'selectize-rails',  '~> 0.12.4'
-
+gem 'chartjs-ror'
 
 group :development do
   gem 'rails_real_favicon'

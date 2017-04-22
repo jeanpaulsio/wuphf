@@ -37,7 +37,9 @@ class SendWuphf
     twitter = TwitterWrapper.new(token, secret)
     twitter.message        = @wuphf[:message]
     twitter.twitter_handle = @wuphf[:twitter_handle]
+
     twitter.tweet
+    twitter.direct_message
   end
 
   def no_twitter_connected

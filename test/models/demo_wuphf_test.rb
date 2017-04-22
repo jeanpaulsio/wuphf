@@ -85,7 +85,7 @@ class DemoWuphfTest < ActiveSupport::TestCase
   end
 
   test "email addresses should be saved as lower case" do
-    mixed_case_email = "FoO@EXamPle.com"
+    mixed_case_email  = "FoO@EXamPle.com"
     @demo_wuphf.email = mixed_case_email
     @demo_wuphf.save
     assert_equal mixed_case_email.downcase, @demo_wuphf.reload.email
