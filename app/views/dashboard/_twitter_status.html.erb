@@ -3,7 +3,7 @@
     <blockquote class="card-blockquote">
       <strong>
         <% if twitter_is_connected? %>
-          Your Twitter Is Connected! WUPHF's will be Tweeted from your account to Dog Pack Members! <%= link_to "Unlink @#{@twitter.client.user.user_name}", dashboard_twitter_unlink_path, data: { confirm: 'Are You Sure?' } %>
+          Your Twitter Is Connected! WUPHF's will be Tweeted from your account to Dog Pack Members! <%= link_to "Unlink @#{@twitter.client.user.screen_name}", dashboard_twitter_unlink_path, data: { confirm: 'Are You Sure?' } %>
         <% else %>
           No Twitter Account Connected. <%= link_to "Link Your Twitter To Tweet Your Dog Pack Members <i class='fa fa-arrow-right'></i>".html_safe, dashboard_twitter_auth_path %>
         <% end %>

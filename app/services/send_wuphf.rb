@@ -1,11 +1,11 @@
 class SendWuphf
   def initialize(message)
-    @current_user = User.find(message.user.id)
+    @current_user = User.find(message.user_id)
     @wuphf = {
-      phone: message.recipient.phone,
-      email: message.recipient.email,
-      twitter_handle: message.recipient.twitter_handle,
-      from: message.user.name,
+      phone: message.recipient_phone,
+      email: message.recipient_email,
+      twitter_handle: message.recipient_twitter_handle,
+      from: message.user_name,
       message: message.content
     }
   end

@@ -15,6 +15,8 @@ class Recipient < ApplicationRecord
                              format: { with: VALID_PHONE_REGEX }
   validates :twitter_handle, length: { maximum: 15 }
 
+  delegate :name, to: :user, prefix: true
+
   private
     def downcase_email
       self.email = email.downcase
