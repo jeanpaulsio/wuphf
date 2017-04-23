@@ -24,4 +24,11 @@ Rails.application.routes.draw do
   resources :demo_wuphfs
   resources :recipients
   resources :messages
+
+  # API Routes
+  namespace :api, defaults: { format: 'json' } do
+    namespace :v1 do
+      resources :recipients
+    end
+  end
 end
