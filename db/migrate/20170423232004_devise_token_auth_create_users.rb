@@ -6,10 +6,10 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.0]
 
     # inspired by https://github.com/lynndylanhurley/devise_token_auth/issues/181
     User.reset_column_information
-    User.find_each do |login|
-      login.uid = login.email
-      login.provider = 'email'
-      login.save!
+    User.find_each do |user|
+      user.uid = user.email
+      user.provider = 'email'
+      user.save!
     end
 
     add_index :users, [:uid, :provider], unique: true
