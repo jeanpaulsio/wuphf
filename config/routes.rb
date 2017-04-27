@@ -30,6 +30,10 @@ Rails.application.routes.draw do
     namespace :v1 do
       mount_devise_token_auth_for 'User', at: 'auth', :controllers => { registrations: 'users/registrations' }
       resources :recipients
+      resources :messages, only: [:create]
+
+      get "/404" => "errors#not_found"
+      get "/500" => "errors#exception"
     end
   end
 end

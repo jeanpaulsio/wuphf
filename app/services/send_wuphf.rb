@@ -43,6 +43,7 @@ class SendWuphf
   end
 
   def no_twitter_connected
+    return true if @current_user.twitter_token_digest.nil? || @current_user.twitter_secret_digest.nil?
     @current_user.twitter_token_digest.empty? || @current_user.twitter_secret_digest.empty? ? true : false
   end
 

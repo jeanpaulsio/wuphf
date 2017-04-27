@@ -6,6 +6,13 @@
 #
 
 michael:
+  uid: michael@test.com
   name: Michael
   email: michael@test.com
+  encrypted_password: <%= User.new.send(:password_digest, 'foobar') %>
+
+jim:
+  uid: jim@test.com
+  name: Jim
+  email: jim@test.com
   encrypted_password: <%= User.new.send(:password_digest, 'foobar') %>
