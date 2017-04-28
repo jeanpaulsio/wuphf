@@ -2,16 +2,12 @@ require 'test_helper'
 
 class RecipientsControllerTest < ActionDispatch::IntegrationTest
   def setup
-    @user         = users(:michael)
-    @recipient    = @user.recipients.first
-    @dwight       = recipients(:dwight)
-    @auth_headers = @user.create_new_auth_token
+    @user              = users(:michael)
+    @recipient         = @user.recipients.first
+    @invalid_recipient = recipients(:dwight)
+    @auth_headers      = @user.create_new_auth_token
 
-    get new_api_v1_user_session_path, params: {}, headers: @auth_headers
-
-    @token     = @auth_headers['access-token']
-    @client_id = @auth_headers['client']
-    @expiry    = @auth_headers['expiry']
+    get new_api_v1_user_session_path, headers: @auth_headers
 
     @valid_params   = { name: "Jim", email: "jim@test.com", phone: "9091234567" }
     @invalid_params = { name: "Jim", email: "jim@test.com", phone: "invalid" }
@@ -79,8 +75,8 @@ class RecipientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "GET api/v1/recipients/:id with another user's recipient" do
-    get api_v1_recipient_path(@dwight), headers: @auth_headers,
-                                        xhr: true
+    get api_v1_recipient_path(@invalid_recipient), headers: @auth_headers,
+                                                   xhr: true
 
     assert_equal 200, status
     assert_equal "null", @response.body

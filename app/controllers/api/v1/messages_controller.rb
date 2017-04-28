@@ -7,7 +7,6 @@ class Api::V1::MessagesController < Api::V1::ApiController
   end
 
   private
-
     def message_params
       params.permit(:content, :user_id, :recipient_id)
     end
