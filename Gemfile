@@ -20,18 +20,26 @@ gem 'faker',            '~> 1.7', '>= 1.7.3'
 gem 'selectize-rails',  '~> 0.12.4'
 gem 'chartjs-ror'
 
-group :development do
-  gem 'rails_real_favicon'
-end
+# API Stuff
+gem 'active_model_serializers', '~> 0.10.5'
+gem 'rack-cors',                '~> 0.4.1'
+gem 'devise_token_auth',        '~> 0.1.40'
+gem 'mailcatcher'
+gem 'omniauth',        '~> 1.6', '>= 1.6.1'
+gem 'omniauth-github', '~> 1.2', '>= 1.2.3'
 
 # Auth
-gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'devise'
 gem 'oauth',  '~> 0.5.1'
 
 # Styling
 gem 'animate-rails',      '~> 1.0', '>= 1.0.10'
 gem 'bootstrap',          '~> 4.0.0.alpha6'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+
+group :development do
+  gem 'rails_real_favicon'
+end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

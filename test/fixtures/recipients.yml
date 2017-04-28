@@ -15,3 +15,11 @@ pam:
   twitter_handle: wuphfwuphf
   facebook_id: wuphfwuphf
   user: michael
+
+dwight:
+  name: dwight
+  email: dwight@test.com
+  phone: "9496405333"
+  twitter_handle: wuphfwuphf
+  facebook_id: wuphfwuphf
+  user: jim

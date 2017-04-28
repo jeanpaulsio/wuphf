@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-first_message:
+michael_to_jim:
   content: this is the first message
   user: michael
   recipient: jim
 
-second_message:
+michael_to_pam:
   content: this is the second message
   user: michael
   recipient: pam
+
+jim_to_dwight:
+  content: from jim to dwight
+  user: jim
+  recipient: dwight
