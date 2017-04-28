@@ -24,9 +24,7 @@ gem 'chartjs-ror'
 gem 'active_model_serializers', '~> 0.10.5'
 gem 'rack-cors',                '~> 0.4.1'
 gem 'devise_token_auth',        '~> 0.1.40'
-gem 'mailcatcher'
-gem 'omniauth',        '~> 1.6', '>= 1.6.1'
-gem 'omniauth-github', '~> 1.2', '>= 1.2.3'
+gem 'omniauth',                 '~> 1.6', '>= 1.6.1'
 
 # Auth
 gem 'devise'
