@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MessagesController < ActionDispatch::IntegrationTest
+class Api::V1::MessagesControllerTest < ActionDispatch::IntegrationTest
   def setup
     @user              = users(:michael)
     @recipient         = recipients(:jim)

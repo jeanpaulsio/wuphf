@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RecipientsControllerTest < ActionDispatch::IntegrationTest
+class Api::V1::RecipientsControllerTest < ActionDispatch::IntegrationTest
   def setup
     @user              = users(:michael)
     @recipient         = @user.recipients.first
