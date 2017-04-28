@@ -25,6 +25,6 @@ module Wuphf
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
 
-    config.exceptions_app = self.routes
+    # config.exceptions_app = self.routes
   end
 end
