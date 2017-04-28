@@ -36,3 +36,4 @@ Currently, Wuphf'ing from the landing page will:
 * Look into building a Facebook bot
 * Better error handling when user sends DM to someone on twitter who they don't follow
 * Weekly subscription to send WUPHFs of office quotes
+* Add API documentation to `/api/v1` views
