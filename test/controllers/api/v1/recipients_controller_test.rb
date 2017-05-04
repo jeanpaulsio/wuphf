@@ -89,7 +89,7 @@ class Api::V1::RecipientsControllerTest < ActionDispatch::IntegrationTest
                                              xhr: true,
                                              params: { name: new_name }
 
-    assert_equal 204, status
+    assert_equal 200, status
     @recipient.reload
     assert_equal new_name, @recipient.name
   end
@@ -101,7 +101,7 @@ class Api::V1::RecipientsControllerTest < ActionDispatch::IntegrationTest
                                              xhr: true,
                                              params: { phone: new_phone }
 
-    assert_equal 204, status
+    assert_equal 200, status
     @recipient.reload
     assert_not_equal new_phone, @recipient.phone
   end

@@ -23,7 +23,7 @@ class Api::V1::RecipientsController < Api::V1::ApiController
   # PUT api/v1/recipients/:id
   def update
     @recipient.update(recipient_params)
-    head :no_content
+    json_response(@recipient)
   end
 
   #DELETE api/v1/recipients/:id
