@@ -33,8 +33,9 @@ Currently, Wuphf'ing from the landing page will:
 ## TODO
 
 * Hash Twitter tokens
-* Connect to Facebook's Messenger API
-* Look into building a Facebook bot
+* Connect to Facebook's Messenger API?
+* Look into building a Facebook bot?
 * Better error handling when user sends DM to someone on twitter who they don't follow
 * Weekly subscription to send WUPHFs of office quotes
 * Add API documentation to `/api/v1` views
+* __Create endpoint for Twitter Auth__
