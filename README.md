@@ -38,4 +38,3 @@ Currently, Wuphf'ing from the landing page will:
 * Better error handling when user sends DM to someone on twitter who they don't follow
 * Weekly subscription to send WUPHFs of office quotes
 * Add API documentation to `/api/v1` views
-* __Create endpoint for Twitter Auth__
