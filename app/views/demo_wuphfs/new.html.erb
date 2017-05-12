@@ -1,7 +1,7 @@
 <%= render 'hero' %>
 
 <div class="container">
-  <div class="row p-5">
+  <div class="row home-padding">
     <div class="col-lg-10 offset-lg-1">
       <h4 class="text-orange text-bold mb-3">Wuphf Someone:</h4>
       <%= render 'form' %>
@@ -9,40 +9,7 @@
   </div>
 </div>
 
-<div class="bg-purple text-white p-5">
-  <div class="container">
-    <h1 class="text-extra-bold text-center">Sign Up For A Free Account</h1>
-    <hr>
-    <div class="row">
-      <div class="mb-4">
-        <h4 class="text-bold">Grow Your Dog Pack</h4>
-        <p class="text-left mb-3">
-          Manage and create contacts in your Dog Pack. Sending a Wuphf has never been this easy and accessible.
-        </p>
-      </div>
-
-      <div class="mb-4">
-        <h4 class="text-bold">Link Your Twitter</h4>
-        <p class="text-left mb-3">
-          Connect your Twitter account so that you Wuphf's will be tweeted directly from your own twitter account.
-        </p>
-      </div>
-      <div class="mb-4">
-        <h4 class="text-bold">Annoy Your Colleagues</h4>
-        <p class="text-left mb-3">
-          It looks like Bill from accounting is ignoring you. Try sending him a Wuphf!
-        </p>
-      </div>
-    </div>
-
-    <hr>
-    <%= link_to new_user_registration_path, class: "text-white" do %>
-      <section class="text-center">
-        <button class="btn btn-lg btn-outline-primary btn-pill text-white border-white mt-3">Get Started Today</button>
-      </section>
-    <% end %>
-  </div>
-</div>
+<%= render 'marketing' %>
 
 <% content_for :page_js do %>
   <script type="text/javascript">
