@@ -38,3 +38,5 @@ Currently, Wuphf'ing from the landing page will:
 * Better error handling when user sends DM to someone on twitter who they don't follow
 * Weekly subscription to send WUPHFs of office quotes
 * Add API documentation to `/api/v1` views
+* Profanity Filter
+* Figure out a way to add DM functionality. Right now DMs fail when a user tries to send one to a user who doesn't follow them

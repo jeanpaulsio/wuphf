@@ -39,7 +39,6 @@ class SendWuphf
     twitter.twitter_handle = @wuphf[:twitter_handle]
 
     twitter.tweet
-    twitter.direct_message
   end
 
   def no_twitter_connected
