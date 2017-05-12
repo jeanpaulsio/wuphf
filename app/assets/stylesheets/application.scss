@@ -45,7 +45,15 @@ textarea { resize: none }
   border-bottom: 2px solid $purple;
 }
 
-.btn-pill, .form-pill {
+.btn-pill, .form-pill, .selectize-input {
+  border-radius: 500px;
+}
+
+.textarea-pill {
+  border-radius: 30px;
+}
+
+.selectize-input.items.not-full.has-options {
   border-radius: 500px;
 }
 
