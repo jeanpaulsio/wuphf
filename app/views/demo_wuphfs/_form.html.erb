@@ -1,36 +1,36 @@
 <%= form_for @demo_wuphf do |f| %>
   <div class="form-group">
     <div class="input-group">
-      <%= f.text_field :from, class: "form-control form-control-lg btn-pill", placeholder: "Your name", required: true %>
+      <%= f.text_field :from, class: "form-control form-control-lg form-pill", placeholder: "Your name", required: true %>
     </div>
   </div>
 
   <div class="form-group">
     <div class="input-group">
-      <%= f.email_field :email, class: "form-control form-control-lg btn-pill", placeholder: "Their Email", required: true %>
+      <%= f.email_field :email, class: "form-control form-control-lg form-pill", placeholder: "Their Email", required: true %>
     </div>
   </div>
 
   <div class="form-group">
     <div class="input-group">
-      <%= f.text_field :phone, class: "form-control form-control-lg btn-pill", placeholder: "Their Phone", maxlength: 12, required: true %>
+      <%= f.text_field :phone, class: "form-control form-control-lg form-pill", placeholder: "Their Phone", maxlength: 12, required: true %>
     </div>
   </div>
 
   <div class="form-group">
     <div class="input-group">
-      <%= f.text_field :twitter_handle, class: "form-control form-control-lg btn-pill", placeholder: "Their Twitter" %>
+      <%= f.text_field :twitter_handle, class: "form-control form-control-lg form-pill", placeholder: "Their Twitter" %>
     </div>
   </div>
 
   <div class="form-group">
     <div class="input-group">
-      <%= f.text_area :message, class: "form-control form-control-lg btn-pill", placeholder: "Type Your Message", maxlength: 123, required: true %>
+      <%= f.text_area :message, class: "form-control form-control-lg form-pill", placeholder: "Type Your Message", maxlength: 123, required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.submit "Send!", class: "btn btn-lg btn-primary btn-pill" %>
+    <%= f.submit "Send!", class: "btn btn-lg btn-primary form-pill" %>
   </div>
 <% end %>
 
