@@ -10,16 +10,6 @@
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_to">
-      <span class="text-orange text-bold">*</span> Recipient Name
-    </label>
-    <div class="input-group">
-      <div class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></div>
-      <%= f.text_field :to, class: "form-control", placeholder: "Recipient Name", required: true %>
-    </div>
-  </div>
-
-  <div class="form-group">
     <label for="demo_wuphf_email">
       <span class="text-orange text-bold">*</span> Recipient Email
     </label>
@@ -41,11 +31,11 @@
 
   <div class="form-group">
     <label for="demo_wuphf_twitter_handle">
-      <span class="text-orange text-bold">*</span> Recipient Twitter
+      Recipient Twitter
     </label>
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-at fa-fw"></i></div>
-      <%= f.text_field :twitter_handle, class: "form-control", placeholder: "username", required: true %>
+      <%= f.text_field :twitter_handle, class: "form-control", placeholder: "username" %>
     </div>
   </div>
 

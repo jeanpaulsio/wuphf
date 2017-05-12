@@ -2,7 +2,6 @@
 
 bark:
   from: Michael
-  to: Ryan
   message: wuphf from demo wuphfs fixture
   email: ryan@test.com
   phone: "9097533874"

@@ -39,4 +39,4 @@ Currently, Wuphf'ing from the landing page will:
 * Weekly subscription to send WUPHFs of office quotes
 * Add API documentation to `/api/v1` views
 * Profanity Filter
-* Figure out a way to add DM functionality. Right now DMs fail when a user tries to send one to a user who doesn't follow them
+* Program responses when people text the Twilio client back

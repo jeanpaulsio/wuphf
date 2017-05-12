@@ -15,11 +15,6 @@ class DemoWuphfTest < ActiveSupport::TestCase
     assert_not @demo_wuphf.valid?
   end
 
-  test "to name should be present" do
-    @demo_wuphf.to = "   "
-    assert_not @demo_wuphf.valid?
-  end
-
   # Phone Validations
   test "phone number should be present" do
     @demo_wuphf.phone = "  "
@@ -92,9 +87,9 @@ class DemoWuphfTest < ActiveSupport::TestCase
   end
 
   # Twitter Handle Validations
-  test "twitter handle should exist" do
-    @demo_wuphf.twitter_handle = "  "
-    assert_not @demo_wuphf.valid?
+  test "twitter is optional" do
+    @demo_wuphf.twitter_handle = ""
+    assert @demo_wuphf.valid?
   end
 
   test "twitter handle should be no longer than 15 characters" do

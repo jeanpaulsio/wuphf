@@ -22,9 +22,15 @@ class SendDemoWuphf
   end
 
   def send_tweet
+    return if no_recipient_twitter
+
     twitter = TwitterWrapper.new
     twitter.message        = @demo_wuphf.message
     twitter.twitter_handle = @demo_wuphf.twitter_handle
     twitter.tweet
+  end
+
+  def no_recipient_twitter
+    @demo_wuphf[:twitter_handle].empty?
   end
 end
