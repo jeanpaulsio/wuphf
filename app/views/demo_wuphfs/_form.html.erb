@@ -1,60 +1,36 @@
 <%= form_for @demo_wuphf do |f| %>
   <div class="form-group">
-    <label for="demo_wuphf_from">
-      <span class="text-orange text-bold">*</span> Your Name
-    </label>
     <div class="input-group">
-      <div class="input-group-addon"><i class="fa fa-id-card-o fa-fw"></i></div>
-      <%= f.text_field :from, class: "form-control", placeholder: "Your Name", required: true %>
+      <%= f.text_field :from, class: "form-control form-control-lg btn-pill", placeholder: "Your name", required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_email">
-      <span class="text-orange text-bold">*</span> Recipient Email
-    </label>
     <div class="input-group">
-      <div class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></div>
-      <%= f.email_field :email, class: "form-control", placeholder: "bark@example.com", required: true %>
+      <%= f.email_field :email, class: "form-control form-control-lg btn-pill", placeholder: "Their Email", required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_phone">
-      <span class="text-orange text-bold">*</span> Recipient Phone
-    </label>
     <div class="input-group">
-      <div class="input-group-addon"><i class="fa fa-phone fa-fw"></i></div>
-      <%= f.text_field :phone, class: "form-control", placeholder: "949.640.5333", maxlength: 12, required: true %>
+      <%= f.text_field :phone, class: "form-control form-control-lg btn-pill", placeholder: "Their Phone", maxlength: 12, required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_twitter_handle">
-      Recipient Twitter
-    </label>
     <div class="input-group">
-      <div class="input-group-addon"><i class="fa fa-at fa-fw"></i></div>
-      <%= f.text_field :twitter_handle, class: "form-control", placeholder: "username" %>
+      <%= f.text_field :twitter_handle, class: "form-control form-control-lg btn-pill", placeholder: "Their Twitter" %>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="demo_wuphf_message">
-      <span class="text-orange text-bold">*</span> Message
-    </label>
     <div class="input-group">
-      <div class="input-group-addon"><i class="fa fa-comments-o fa-fw"></i></div>
-      <%= f.text_area :message, class: "form-control", placeholder: "Bears. Beats. Battlestar Galatica.", maxlength: 123, required: true %>
+      <%= f.text_area :message, class: "form-control form-control-lg btn-pill", placeholder: "Type Your Message", maxlength: 123, required: true %>
     </div>
   </div>
 
   <div class="form-group">
-    <span class="text-orange">* denotes a required field</span>
-  </div>
-
-  <div class="form-group">
-    <%= f.submit "Send Demo WUPHF!", class: "btn btn-outline-primary" %>
+    <%= f.submit "Send Your Wuphf", class: "btn btn-lg btn-primary btn-pill" %>
   </div>
 <% end %>
 

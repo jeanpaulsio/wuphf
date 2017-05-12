@@ -2,12 +2,8 @@
 
 <div class="container">
   <div class="row p-5">
-    <div class="col-lg-5">
-      <%= render 'marketing' %>
-    </div>
-
-    <div class="col-lg-6 offset-lg-1 pt-3 bg-faded">
-      <h3 class="text-orange text-bold">Demo WUPHF Here <i class="fa fa-fw fa-hand-o-down"></i></h3>
+    <div class="col-lg-10 offset-lg-1">
+      <h4 class="text-orange text-bold mb-3">Send a Wuphf Now:</h4>
       <%= render 'form' %>
     </div>
   </div>
@@ -48,3 +44,9 @@
     <% end %>
   </div>
 </div>
+
+<% content_for :page_js do %>
+  <script type="text/javascript">
+    <%= render file: "#{Rails.root}/app/views/demo_wuphfs/js/call_to_action.js" %>
+  </script>
+<% end %>

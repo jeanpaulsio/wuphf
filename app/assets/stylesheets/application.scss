@@ -8,6 +8,7 @@
 @import "bootstrap";
 @import "animate";
 @import "font-awesome";
+@import "typed";
 
 // Global
 html, body {
@@ -19,6 +20,7 @@ textarea { resize: none }
 .btn-square { border-radius: 0 }
 .text-thin { font-weight: 200 }
 .text-bold { font-weight: 600 }
+.text-extra-bold { font-weight: 800 }
 .text-orange { color: $orange }
 .text-purple { color: $state-success-bg }
 .bg-purple { background: $state-success-bg }
@@ -41,19 +43,27 @@ textarea { resize: none }
   color: white;
 }
 
+.btn-pill {
+  border-radius: 500px;
+}
+
 // Home
-#hero{
-  background: $orange;
+#hero {
+  background: white;
   height: auto;
   width: 100%;
   text-align: center;
-  img {
-    display: block;
-    margin: auto;
-    padding-top: 3em;
+  padding-top: 5em;
+  h1 {
+    color: $purple;
+    font-weight: 800;
+    font-size: 2em;
+    padding-bottom: .5em;
   }
-  h3 {
-    color: white;
+  h4 {
+    color: $purple;
     padding-bottom: 2em;
+    font-weight: 300;
+    font-style: italic;
   }
 }
