@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(){
     Typed.new(".who-to-wuphf", {
         strings: [
-          "yourself.^1500",
-          "your bff.^1500",
-          "your boss.^1500",
-          "your coworkers.^1500"
+          "friends.^1500",
+          "family.^1500",
+          "boss.^1500",
+          "coworkers.^1500",
+          "bff."
         ],
         stringsElement: null,
         typeSpeed: 70,
