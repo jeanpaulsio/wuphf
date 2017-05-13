@@ -1,10 +1,19 @@
 <%= form_for @demo_wuphf do |f| %>
-  <div class="form-group">
-    <div class="input-group">
-      <%= f.text_field :from, class: "form-control form-control-lg form-pill", placeholder: "Your name", required: true %>
+  <div class="card bg-faded mt-3 mb-3 p-5 border-75">
+    <div class="form-group">
+      <div class="input-group">
+        <%= f.text_field :from, class: "form-control form-control-lg form-pill", placeholder: "Your Name", required: true %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <%= f.text_area :message, class: "form-control form-control-lg textarea-pill", placeholder: "Your Message", maxlength: 140, rows: 4, required: true %>
+      </div>
     </div>
   </div>
 
+  <h5 class="text-orange text-bold mb-3">Who is Receiving Your Wuphf?</h5>
   <div class="form-group">
     <div class="input-group">
       <%= f.email_field :email, class: "form-control form-control-lg form-pill", placeholder: "Their Email", required: true %>
@@ -24,13 +33,7 @@
   </div>
 
   <div class="form-group">
-    <div class="input-group">
-      <%= f.text_area :message, class: "form-control form-control-lg textarea-pill", placeholder: "Type Your Message", maxlength: 140, rows: 4, required: true %>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.submit "Send Wuphf Now", class: "btn btn-lg btn-primary form-pill" %>
+    <%= f.submit "Send", class: "btn btn-lg btn-primary form-pill" %>
   </div>
 <% end %>
 

@@ -46,7 +46,7 @@ textarea { resize: none }
 }
 
 .btn-pill, .form-pill, .selectize-input {
-  border-radius: 500px;
+  border-radius: 20px;
 }
 
 .textarea-pill {
@@ -54,7 +54,7 @@ textarea { resize: none }
 }
 
 .selectize-input.items.not-full.has-options {
-  border-radius: 500px;
+  border-radius: 20px;
 }
 
 // Home
@@ -74,5 +74,11 @@ textarea { resize: none }
     padding-bottom: 2em;
     font-weight: 300;
     font-style: italic;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero h1 {
+    font-size: 1.3em;
   }
 }
