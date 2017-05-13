@@ -53,7 +53,18 @@ textarea { resize: none }
   border-radius: 30px;
 }
 
-.selectize-input.items.not-full.has-options {
+.selectize-input.items.not-full.has-options,
+.selectize-input.items.has-options.full.has-items {
+  border-radius: 20px;
+  line-height: 2;
+  padding-left: 1em;
+}
+.selectize-dropdown.single, .selectize-dropdown-content {
+  padding: .3em;
+  border-radius: 20px;
+}
+.selectize-dropdown-content > .option {
+  padding: .5em;
   border-radius: 20px;
 }
 
