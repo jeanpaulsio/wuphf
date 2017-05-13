@@ -33,7 +33,7 @@ class RecipientsController < ApplicationController
 
   def destroy
     @recipient.destroy
-    flash[:success] = "WUPHF! Removed from Dog Pack!"
+    flash.now[:success] = "WUPHF! Removed from Dog Pack!"
     redirect_to dashboard_path
   end
 

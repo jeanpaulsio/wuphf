@@ -1,18 +1,37 @@
 <div class="container">
+  <div class="row">
 
-  <div class="card bg-faded mt-3 mb-3 p-3 border-75">
-    <%= render 'dashboard/wuphf_form' %>
-  </div>
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card mt-3 mb-3 p-3 btn-pill">
+        <%= render 'dashboard/wuphf_form' %>
+      </div>
+    </div>
 
-  <%= render 'dashboard/twitter_status' %>
+    <div class="col-lg-8 offset-lg-2">
+      <%= render 'dashboard/twitter_status' %>
+    </div>
 
-  <div class="card-deck">
-    <%= render 'dashboard/add_to_dogpack' %>
-    <%= render @recipients %>
+
+    <div class="col-lg-8 offset-lg-2">
+      <%= render 'dashboard/empty_dogpack' %>
+    </div>
+
+    <div class="col-lg-8 offset-lg-2">
+      <div class="mt-5 mb-5 text-center">
+        <%= link_to new_recipient_path do %>
+          + Add a Member To Your Dog Pack
+        <% end %>
+      </div>
+
+      <div class="row">
+        <%= render @recipients %>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<hr>
+
 
 <% content_for :page_js do %>
   <script type="text/javascript">

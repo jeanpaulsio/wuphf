@@ -1,7 +1,7 @@
 <%= form_for @message do |f| %>
   <div class="form-group">
-    <select id="select-recipient" name="message[recipient_id]" placeholder="WUPHF someone from your Dog Pack" class="form-control form-control-lg form-pill">
-      <option value="">WUPHF someone from your Dog Pack</option>
+    <select id="select-recipient" name="message[recipient_id]" placeholder="Send a Wuphf" class="form-control form-control-lg form-pill" required>
+      <option value="">Send a Wuphf</option>
       <% @recipients.each do |recipient| %>
         <option value="<%= recipient.id %>"><%= recipient.name %></option>
       <% end %>
@@ -9,10 +9,10 @@
   </div>
 
   <div class="form-group">
-    <%= f.text_area :content, placeholder: "Your Mesage (140 Characters)", class: "form-control form-control-lg textarea-pill", maxlength: 140, rows: 4, required: true %>
+    <%= f.text_area :content, placeholder: "Message (140 Characters)", class: "form-control form-control-lg", maxlength: 140, rows: 4, required: true %>
   </div>
 
   <div class="form-group">
-    <%= f.submit "Send!", class: "btn btn-lg btn-primary form-pill" %>
+    <%= f.submit "Send!", class: "btn btn-block btn-lg text-white bg-purple form-pill" %>
   </div>
 <% end %>
