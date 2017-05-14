@@ -15,5 +15,4 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require selectize
-//= require Chart.min
 //= require_tree .
