@@ -35,6 +35,10 @@ gem 'animate-rails',      '~> 1.0', '>= 1.0.10'
 gem 'bootstrap',          '~> 4.0.0.alpha6'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 
+# Rollbar
+gem 'rollbar', '~> 2.14', '>= 2.14.1'
+gem 'oj',      '~> 3.0', '>= 3.0.7'
+
 group :development do
   gem 'rails_real_favicon'
 end
