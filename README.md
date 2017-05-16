@@ -6,6 +6,12 @@ Inspired by [NBC's The Office](http://www.nbc.com/the-office)
 
 This is an open-source toy app to annoy your friends. Wuphfs can be sent with or without registering. By registering, users are able to create and manage contacts to whom they can send Wuphfs to. A user's Wuphf can only send a tweet from their own account if they register. Unregistered users who send Wuphfs will send tweets from the @wuphfwuphf twitter handle.
 
+
+## Features
+* SendGrid for sending Emails
+* Twilio for sending SMS messages
+* Twitter for sending tweets
+
 ## TODO
 
 * Hash Twitter tokens
