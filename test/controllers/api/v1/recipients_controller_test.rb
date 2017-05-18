@@ -3,7 +3,7 @@ require 'test_helper'
 class Api::V1::RecipientsControllerTest < ActionDispatch::IntegrationTest
   def setup
     @user              = users(:michael)
-    @recipient         = @user.recipients.first
+    @recipient         = recipients(:jim)
     @invalid_recipient = recipients(:dwight)
     @auth_headers      = @user.create_new_auth_token
 
@@ -83,7 +83,7 @@ class Api::V1::RecipientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "PUT api/v1/recipients/:id with valid params" do
-    new_name = "Pammy"
+    new_name = "Jimmy"
 
     patch api_v1_recipient_path(@recipient), headers: @auth_headers,
                                              xhr: true,
