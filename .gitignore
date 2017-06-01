@@ -21,3 +21,11 @@
 
 # Ignore application configuration
 /config/application.yml
+
+server.crt
+server.csr
+server.key
+server.pass.key
+
+.DS_Store
+public/.DS_Store
