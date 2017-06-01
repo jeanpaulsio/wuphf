@@ -6,6 +6,6 @@ class WuphfMailer < ApplicationMailer
     @message = wuphf[:message]
     @from    = wuphf[:from]
 
-    mail(to: @email, subject: "WUPHF FROM #{@from.upcase}!")
+    mail(to: @email, subject: "MESSAGE FROM #{@from.upcase}!")
   end
 end

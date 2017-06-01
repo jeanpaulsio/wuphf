@@ -9,7 +9,7 @@ class TwilioWrapper
     @client.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: @phone,
-      body: "#{@from.upcase} WUPHF'D: " + @message
+      body: "#{@from} says: " + @message
     )
   end
 
