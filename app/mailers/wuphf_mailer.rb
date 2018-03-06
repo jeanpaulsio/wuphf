@@ -1,5 +1,5 @@
 class WuphfMailer < ApplicationMailer
-  default from: 'noreply@wuphf.io'
+  default from: 'noreply@wuphfwuphf.herokuapp.com/'
 
   def wuphf_mail(wuphf)
     @email   = wuphf[:email]
